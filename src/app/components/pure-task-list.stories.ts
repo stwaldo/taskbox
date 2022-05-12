@@ -1,26 +1,26 @@
 import { Story } from '@storybook/angular/types-6-0';
 import { CommonModule } from '@angular/common';
-import { TaskComponent } from './../task/task.component';
+import { TaskComponent } from './task/task.component';
 import {
   componentWrapperDecorator,
   Meta,
   moduleMetadata,
 } from '@storybook/angular';
-import { TaskListComponent } from './task-list.component';
-import * as TaskStories from '../task/task.stories';
+import * as TaskStories from './task/task.stories';
+import { PureTaskListComponent } from './pure-task-list/pure-task-list.component';
 
 export default {
-  component: TaskListComponent,
+  component: PureTaskListComponent,
   decorators: [
     moduleMetadata({
-      declarations: [TaskListComponent, TaskComponent],
+      declarations: [PureTaskListComponent, TaskComponent],
       imports: [CommonModule],
     }),
     componentWrapperDecorator(
       (story) => `<div style="margin: 3em">${story}</div>`
     ),
   ],
-  title: 'TaskList',
+  title: 'PureTaskList',
 } as Meta;
 
 const Template: Story = (args) => ({

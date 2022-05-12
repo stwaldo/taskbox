@@ -27,7 +27,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
     </div>
     <div class="actions">
       <a *ngIf="task?.state !== 'TASK_ARCHIVED'" (click)="onPin(task.id)">
-        <span class="icon-star" attr.aria-label="pinTask-{{ tsak?.id }}"></span>
+        <span class="icon-star" attr.aria-label="pinTask-{{ task?.id }}"></span>
       </a>
     </div>
   </div>`,
